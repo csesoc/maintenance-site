@@ -1,1 +1,11 @@
 @layer reset, base, tokens, recipes, utilities;
+
+@font-face {
+	font-family: "TT Commons Pro";
+	src: url("/fonts/ttcp-var.woff2") format("woff2");
+	display: "swap";
+}
+
+:root {
+	--font-ttcp: "TT Commons Pro", sans-serif;
+}
