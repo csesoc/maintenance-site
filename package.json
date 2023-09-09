@@ -4,15 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "panda codegen --clean && vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --plugin-search-dir . --write .",
-    "deps:update": "npx npm-check-updates --interactive --format group"
+    "deps:update": "npx npm-check-updates --interactive --format group",
+	"panda:codegen": "panda codegen"
   },
   "devDependencies": {
+    "@pandacss/dev": "0.14.0",
     "@sveltejs/adapter-auto": "2.1.0",
     "@sveltejs/adapter-static": "2.0.3",
     "@sveltejs/kit": "1.24.1",
